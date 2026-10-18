@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathBits | Math in Everyday Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><a href="#home" class="logo">Math<span>Bits.</span></a><button id="menuBtn"
+            aria-label="Toggle menu">☰</button>
+        <nav id="nav"><a href="#topics">Topics</a><a href="#quiz">Quiz</a><a href="#calculator">Calculator</a><a
+                href="#poll">Poll</a><a href="#about">About</a></nav>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-text"><span class="tag">MATHEMATICS IN THE MODERN WORLD</span>
+                <h1>Math is part of<br><span>everyday life.</span></h1>
+                <p>A simple and interactive math portal made by first-year IT students. Explore patterns, understand
+                    math symbols, and solve everyday problems.</p><a class="btn" href="#topics">Start Exploring </a>
+            </div>
+            <div class="hero-shape">
+                <div class="shape">∑</div>
+                <div class="float f1">2 + 2 = 4</div>
+                <div class="float f2">1, 1, 2, 3, 5...</div>
+                <div class="float f3">25% OFF</div>
+            </div>
+        </section>
+        <section class="section" id="topics">
+            <div class="section-title"><span class="tag">01 — LEARN</span>
+                <h2>Three simple math topics</h2>
+                <p>Math concepts we can see and use every day.</p>
+            </div>
+            <div class="cards">
+                <article class="card purple">
+                    <div class="icon">🔢</div>
+                    <h3>Patterns &amp; Numbers</h3>
+                    <p>Patterns help us find what comes next. They appear in number sequences, nature, and technology.
+                    </p>
+                    <div class="example">2, 4, 6, 8, <b>?</b></div><small>Can you spot the rule?</small>
+                </article>
+                <article class="card blue">
+                    <div class="icon">✏️</div>
+                    <h3>Math Symbols</h3>
+                    <p>Symbols help us write mathematical ideas clearly and briefly.</p>
+                    <div class="example">x + 3 = 7</div><small>Find the value of x.</small>
+                </article>
+                <article class="card yellow">
+                    <div class="icon">🧠</div>
+                    <h3>Problem Solving</h3>
+                    <p>We can solve problems by understanding the question, choosing a method, and checking our answer.
+                    </p>
+                    <div class="example">Plan → Solve → Check</div><small>Use a clear step-by-step process.</small>
+                </article>
+            </div>
+        </section>
+        <section class="section soft" id="quiz">
+            <div class="section-title"><span class="tag">02 — TRY IT</span>
+                <h2>Math quiz challenge</h2>
+                <p>Choose a topic. Each quiz has five questions, shown in a randomized order. Select an answer to see
+                    feedback and track your score.</p>
+            </div>
+            <div class="quiz-panel">
+                <div class="quiz-tabs" role="group" aria-label="Choose quiz topic"><button class="quiz-tab active"
+                        data-topic="patterns">Patterns &amp; Numbers</button><button class="quiz-tab"
+                        data-topic="symbols">Math Language &amp; Symbols</button><button class="quiz-tab"
+                        data-topic="reasoning">Problem Solving &amp; Reasoning</button></div>
+                <div class="quiz-status"><span id="quizProgress">Question 1 of 5</span><strong id="quizScore">Score: 0 /
+                        5</strong></div>
+                <div id="quizQuestion" class="q" aria-live="polite"></div>
+                <div class="quiz-controls"><button class="btn" id="nextQuestion" disabled>Next question
+                        →</button><button class="btn btn-light" id="restartQuiz">Shuffle &amp; restart</button></div>
+                <p class="note">Each topic contains five questions. Restart to shuffle their order. These quizzes run in
+                    your browser and do not collect personal information.</p>
+            </div>
+        </section>
+        <section class="section" id="calculator">
+            <div class="section-title"><span class="tag">03 — MATH IN REAL LIFE</span>
+                <h2>Simple discount calculator</h2>
+                <p>Use percentages to work out how much you save when shopping.</p>
+            </div>
+            <div class="calc-box">
+                <div class="calc-inputs"><label>Original price (₱)<input type="number" id="price" value="100"
+                            min="0"></label><label>Discount (%)<input type="number" id="discount" value="20" min="0"
+                            max="100"></label><button class="btn" id="calculate">Calculate</button></div>
+                <div class="calc-answer"><span>YOU SAVE</span><strong id="save">₱20.00</strong><span>FINAL
+                        PRICE</span><strong id="final">₱80.00</strong>
+                    <p id="explain">20% of ₱100 is ₱20. The final price is ₱80.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section soft" id="poll">
+            <div class="section-title"><span class="tag">04 — SHARE YOUR ANSWER</span>
+                <h2>How do you solve problems?</h2>
+                <p>Choose the method you usually try first, then view the results recorded in this browser.</p>
+            </div>
+            <div class="poll-layout">
+                <form class="poll-box" id="pollForm"><label><input type="radio" name="method" value="Look for a pattern"
+                            required> Look for a pattern</label><label><input type="radio" name="method"
+                            value="Use a formula"> Use a formula</label><label><input type="radio" name="method"
+                            value="Draw it"> Draw or visualize it</label><label><input type="radio" name="method"
+                            value="Guess and check"> Guess and check</label><button class="btn" type="submit">Submit
+                        vote</button>
+                    <p class="note">Demo only: votes are saved in this browser, not shared with other visitors.</p>
+                </form>
+                <div class="results">
+                    <h3>Poll results</h3>
+                    <p id="total">No votes yet.</p>
+                    <div id="bars"></div>
+                    <p class="note">For the actual project, connect Google Forms or Microsoft Forms to collect real
+                        visitor responses and generate charts.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section about" id="about"><span class="tag">05 — ABOUT THE PROJECT</span>
+            <h2>Made by students, for students.</h2>
+            <p>This website demonstrates how mathematics connects with daily life through simple explanations,
+                interactive questions, and a discount calculator.</p>
+            <div class="about-grid">
+                <div><b>Group members</b>
+                    <p>Add the names of your 6–7 group members here.</p>
+                </div>
+                <div><b>AI use</b>
+                    <p>AI assisted with the initial website layout and sample interactions. Check the math and edit the
+                        content as a group.</p>
+                </div>
+                <div><b>References</b>
+                    <p>Add your verified course materials and other sources here.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer><a href="#home" class="logo">Math<span>Bits.</span></a>
+        <p>Mathematics in the Modern World · Digital Math Portal</p><a href="#home"></a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
